@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ms">
+<html lang="ms" id="top" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,20 +25,20 @@
         }
     </script>
 </head>
-<body class="bg-brand-light text-slate-800 font-sans antialiased scroll-smooth pb-12">
+<body class="bg-brand-light text-slate-800 font-sans antialiased pb-12">
 
     <!-- 1. HEADER & NAVIGATION -->
     <header class="bg-brand-dark text-white sticky top-0 z-50 shadow-md">
         <div class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
-            <!-- Logo Syarikat (Back To Top) -->
-            <a href="#home" class="flex items-center space-x-2 sm:space-x-3 hover:opacity-90 transition-opacity shrink-0">
+            <!-- Logo Syarikat (Kembali ke Paling Atas Skrin - Tiada Sangkut) -->
+            <a href="#top" class="flex items-center space-x-2 sm:space-x-3 hover:opacity-90 transition-opacity shrink-0">
                 <i class="fa-solid fa-warehouse text-brand-orange text-2xl sm:text-3xl"></i>
                 <span class="text-lg sm:text-xl font-bold tracking-wider">GLORIS<span class="text-brand-orange">COMMERCE</span></span>
             </a>
             
-            <!-- Menu Navigasi (Hanya muncul di Desktop Besar untuk elak pecah) -->
+            <!-- Menu Navigasi -->
             <nav class="hidden lg:flex space-x-8 font-medium">
-                <a href="#home" class="hover:text-brand-orange transition-colors">Utama</a>
+                <a href="#top" class="hover:text-brand-orange transition-colors">Utama</a>
                 <a href="#services" class="hover:text-brand-orange transition-colors">Servis Kami</a>
                 <a href="#about" class="hover:text-brand-orange transition-colors">Mengenai Kami</a>
                 <a href="#contact" class="hover:text-brand-orange transition-colors">Hubungi Kami</a>
@@ -82,7 +82,7 @@
                 </div>
             </div>
             
-            <!-- Ilustrasi Gudang Dashboard (Sudah dibersihkan dan dioptimumkan untuk Mobile) -->
+            <!-- Ilustrasi Gudang Dashboard -->
             <div class="w-full flex justify-center relative">
                 <div class="w-full max-w-md bg-slate-800 rounded-2xl border border-slate-700 p-6 sm:p-8 flex flex-col justify-between shadow-2xl relative">
                     <div class="flex justify-between items-center border-b border-slate-700 pb-4 mb-6">
@@ -121,7 +121,6 @@
             <p class="text-slate-500 max-w-xl mx-auto mt-2 text-sm sm:text-base">Semua yang anda perlukan daripada proses barang sampai hinggalah bungkusan selamat di tangan pelanggan.</p>
             
             <div class="grid md:grid-cols-3 gap-6 sm:gap-8 mt-12 text-left">
-                <!-- Kad 1 -->
                 <div class="p-6 sm:p-8 rounded-2xl bg-brand-light border border-slate-200/60 hover:shadow-xl transition-shadow group">
                     <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-orange-500/10 flex items-center justify-center text-brand-orange text-xl sm:text-2xl mb-6 group-hover:bg-brand-orange group-hover:text-white transition-all">
                         <i class="fa-solid fa-boxes-packing"></i>
@@ -130,7 +129,6 @@
                     <p class="text-slate-600 text-sm sm:text-base leading-relaxed">Barang modal anda disimpan di dalam gudang berpengawal, bebas kelembapan, dan dipantau CCTV 24 jam dengan sistem susunan rak berkod.</p>
                 </div>
 
-                <!-- Kad 2 -->
                 <div class="p-6 sm:p-8 rounded-2xl bg-brand-light border border-slate-200/60 hover:shadow-xl transition-shadow group">
                     <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-orange-500/10 flex items-center justify-center text-brand-orange text-xl sm:text-2xl mb-6 group-hover:bg-brand-orange group-hover:text-white transition-all">
                         <i class="fa-solid fa-box-open"></i>
@@ -139,7 +137,6 @@
                     <p class="text-slate-600 text-sm sm:text-base leading-relaxed">Sistem cetakan consignment note automatik. Setiap pesanan dibungkus kemas menggunakan bubble wrap tebal mengikut standard SOP ketat.</p>
                 </div>
 
-                <!-- Kad 3 -->
                 <div class="p-6 sm:p-8 rounded-2xl bg-brand-light border border-slate-200/60 hover:shadow-xl transition-shadow group">
                     <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-orange-500/10 flex items-center justify-center text-brand-orange text-xl sm:text-2xl mb-6 group-hover:bg-brand-orange group-hover:text-white transition-all">
                         <i class="fa-solid fa-truck-fast"></i>
@@ -276,7 +273,7 @@
                     </div>
                 </div>
 
-                <!-- Google Maps Embed Berserta Butang Akses Direct -->
+                <!-- Google Maps Embed -->
                 <div class="w-full flex flex-col space-y-3">
                     <div class="w-full h-64 rounded-2xl overflow-hidden border border-slate-200 shadow-inner">
                         <iframe 
