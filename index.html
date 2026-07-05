@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gloris Commerce Sdn Bhd - Pakej Fulfillment & Gudang E-Commerce</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
         tailwind.config = {
@@ -25,13 +27,16 @@
 </head>
 <body class="bg-brand-light text-slate-800 font-sans antialiased scroll-smooth pb-12">
 
+    <!-- 1. HEADER & NAVIGATION -->
     <header class="bg-brand-dark text-white sticky top-0 z-50 shadow-md">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo Syarikat (Back To Top) -->
             <a href="#home" class="flex items-center space-x-3 hover:opacity-90 transition-opacity">
                 <i class="fa-solid fa-warehouse text-brand-orange text-3xl"></i>
                 <span class="text-xl font-bold tracking-wider">GLORIS<span class="text-brand-orange">COMMERCE</span></span>
             </a>
             
+            <!-- Menu Navigasi -->
             <nav class="hidden md:flex space-x-8 font-medium">
                 <a href="#home" class="hover:text-brand-orange transition-colors">Utama</a>
                 <a href="#services" class="hover:text-brand-orange transition-colors">Servis Kami</a>
@@ -39,6 +44,7 @@
                 <a href="#contact" class="hover:text-brand-orange transition-colors">Hubungi Kami</a>
             </nav>
 
+            <!-- CTA Pantas (Desktop) -->
             <div class="hidden md:flex items-center space-x-4">
                 <a href="https://wa.me/601165561305?text=Salam%20Gloris%20Commerce,%20saya%20berminat%20dengan%20servis%20fulfillment%20gudang." 
                    target="_blank" 
@@ -50,7 +56,9 @@
         </div>
     </header>
 
-    <section id="home" class="bg-brand-dark text-white py-16 md:py-24 relative overflow-hidden">
+    <!-- 2. HERO SECTION -->
+    <section id="home" class="bg-brand-dark text-white py-20 md:py-32 relative overflow-hidden">
+        <!-- Reka Bentuk Geometrik Latar Belakang -->
         <div class="absolute inset-0 opacity-10 pointer-events-none">
             <div class="absolute -top-10 -right-10 w-96 h-96 bg-brand-orange rounded-full filter blur-3xl"></div>
         </div>
@@ -61,10 +69,10 @@
                 <h1 class="text-4xl md:text-5xl font-black leading-tight">
                     Anda Fokus Jual,<br><span class="text-brand-orange">Kami Urus</span> Simpan & Pos Barang.
                 </h1>
-                <p class="text-slate-300 text-base md:text-lg">
-                    Gloris Commerce Sdn Bhd menyediakan sistem pengurusan stor, pembungkusan pantas, dan penghantaran terus kepada pelanggan e-commerce anda tanpa pusing kepala.
+                <p class="text-slate-300 text-lg">
+                    Gloris Commerce Sdn Bhd menyediakan sistem pengurusan stor, pembungkusan pantas, dan penghantaran terus kepada pelanggan e-commerce anda tanpa pusing kepala. Selamat, sistematik, dan efisien.
                 </p>
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 pt-2">
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
                     <a href="#contact" class="bg-brand-orange text-white text-center px-8 py-4 rounded-xl font-bold shadow-lg shadow-orange-500/20 hover:bg-orange-600 transition-colors">
                         Minta Sebut Harga
                     </a>
@@ -73,25 +81,9 @@
                         <span>Bincang di WhatsApp</span>
                     </a>
                 </div>
-
-                <div class="bg-slate-800/90 p-5 rounded-2xl border border-slate-700/60 shadow-xl max-w-md mt-6">
-                    <h3 class="text-sm font-bold tracking-wide uppercase text-brand-orange mb-3 flex items-center space-x-2">
-                        <i class="fa-solid fa-magnifying-glass-location text-lg"></i>
-                        <span>Semak Status Bungkusan (Tracking)</span>
-                    </h3>
-                    <form onsubmit="redirectToTracking(event)" class="flex flex-col sm:flex-row gap-2">
-                        <input type="text" id="tracking_number" required 
-                            class="flex-1 px-4 py-3 rounded-xl bg-slate-900 text-white border border-slate-700 text-sm focus:outline-none focus:border-brand-orange placeholder-slate-500" 
-                            placeholder="Masukkan No. Tracking Anda...">
-                        <button type="submit" class="bg-brand-orange text-white px-5 py-3 rounded-xl font-bold text-sm hover:bg-orange-600 transition-colors flex items-center justify-center space-x-2">
-                            <span>Semak</span>
-                            <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </button>
-                    </form>
-                    <p class="text-[11px] text-slate-400 mt-2">Dikuasakan secara selamat melalui sistem Tracking.my</p>
-                </div>
             </div>
             
+            <!-- Ilustrasi / Gambar Representasi Gudang Dashboard -->
             <div class="hidden md:flex justify-center relative">
                 <div class="w-full h-80 bg-slate-800 rounded-2xl border border-slate-700 p-8 flex flex-col justify-between shadow-2xl relative">
                     <div class="flex justify-between items-center border-b border-slate-700 pb-4">
@@ -125,12 +117,14 @@
         </div>
     </section>
 
+    <!-- 3. SERVICES SECTION -->
     <section id="services" class="py-20 bg-white">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl font-black text-brand-dark">Servis Pengurusan Penuh Kami</h2>
             <p class="text-slate-500 max-w-xl mx-auto mt-2">Semua yang anda perlukan daripada proses barang sampai hinggalah bungkusan selamat di tangan pelanggan.</p>
             
             <div class="grid md:grid-cols-3 gap-8 mt-12 text-left">
+                <!-- Kad 1 -->
                 <div class="p-8 rounded-2xl bg-brand-light border border-slate-200/60 hover:shadow-xl transition-shadow group">
                     <div class="w-14 h-14 rounded-xl bg-orange-500/10 flex items-center justify-center text-brand-orange text-2xl mb-6 group-hover:bg-brand-orange group-hover:text-white transition-all">
                         <i class="fa-solid fa-boxes-packing"></i>
@@ -139,6 +133,7 @@
                     <p class="text-slate-600 leading-relaxed">Barang modal anda disimpan di dalam gudang berpengawal, bebas kelembapan, dan dipantau CCTV 24 jam dengan sistem susunan rak berkod.</p>
                 </div>
 
+                <!-- Kad 2 -->
                 <div class="p-8 rounded-2xl bg-brand-light border border-slate-200/60 hover:shadow-xl transition-shadow group">
                     <div class="w-14 h-14 rounded-xl bg-orange-500/10 flex items-center justify-center text-brand-orange text-2xl mb-6 group-hover:bg-brand-orange group-hover:text-white transition-all">
                         <i class="fa-solid fa-box-open"></i>
@@ -147,6 +142,7 @@
                     <p class="text-slate-600 leading-relaxed">Sistem cetakan consignment note automatik. Setiap pesanan dibungkus kemas menggunakan bubble wrap tebal mengikut standard SOP ketat.</p>
                 </div>
 
+                <!-- Kad 3 -->
                 <div class="p-8 rounded-2xl bg-brand-light border border-slate-200/60 hover:shadow-xl transition-shadow group">
                     <div class="w-14 h-14 rounded-xl bg-orange-500/10 flex items-center justify-center text-brand-orange text-2xl mb-6 group-hover:bg-brand-orange group-hover:text-white transition-all">
                         <i class="fa-solid fa-truck-fast"></i>
@@ -158,6 +154,7 @@
         </div>
     </section>
 
+    <!-- 4. ABOUT & WHY CHOOSE US -->
     <section id="about" class="py-20 bg-brand-light">
         <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
             <div class="space-y-6">
@@ -183,6 +180,7 @@
                 </div>
             </div>
             
+            <!-- Statistik Ringkas Ringan -->
             <div class="bg-brand-dark text-white p-10 rounded-2xl grid grid-cols-2 gap-8 shadow-xl">
                 <div class="text-center p-4 bg-slate-800 rounded-xl border border-slate-700/50">
                     <div class="text-3xl md:text-4xl font-black text-brand-orange">5,000+</div>
@@ -204,15 +202,19 @@
         </div>
     </section>
 
+    <!-- 5. CONTACT, FORM & MAP SECTION -->
     <section id="contact" class="py-20 bg-white">
         <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12">
             
+            <!-- Bahagian Borang Pertanyaan (DENGAN KEY WEB3FORMS ANDA) -->
             <div class="bg-brand-light p-8 rounded-2xl border border-slate-200 shadow-sm">
                 <h3 class="text-2xl font-bold text-brand-dark mb-2">Hubungi Kami / Dapatkan Sebut Harga</h3>
                 <p class="text-slate-500 text-sm mb-6">Isi borang di bawah, pasukan jualan Gloris Commerce Sdn Bhd akan emelkan sebut harga pakej stor simpanan dalam masa 24 jam.</p>
                 
+                <!-- Form Action menggunakan Web3Forms -->
                 <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
-                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                    <!-- Memasukkan Access Key milik anda secara tepat -->
+                    <input type="hidden" name="access_key" value="a70b28a4-a05b-4095-b23c-c0090fa0d142">
                     
                     <div>
                         <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Nama Penuh / Nama Syarikat</label>
@@ -245,6 +247,7 @@
                 </form>
             </div>
 
+            <!-- Maklumat Lokasi Fisikal & Google Maps Embedded -->
             <div class="flex flex-col justify-between space-y-6">
                 <div class="space-y-4">
                     <h3 class="text-2xl font-bold text-brand-dark">Hubungi Hub Kami</h3>
@@ -276,9 +279,10 @@
                     </div>
                 </div>
 
+                <!-- Google Maps (Kawasan U5 Shah Alam / Bandar Pinggiran Subang) -->
                 <div class="w-full h-64 rounded-2xl overflow-hidden border border-slate-200 shadow-inner">
                     <iframe 
-                        src="https://maps.google.com/maps?q=32-G,%20Jalan%20Musytari%20AQ%20U5/AQ,%20Bandar%20Pinggiran%20Subang&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.821731671234!2d101.53488837584144!3d3.1417539535035414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4f27f0932bb1%3A0xa63a236df91efb88!2sJalan%20Musytari%20AQ%20U5%2FAQ%2C%20Bandar%20Pinggiran%20Subang%2C%2040150%20Shah%20Alam%2C%20Selangor!5e0!3m2!1sms!2smy!4v1719999999999!5m2!1sms!2smy" 
                         class="w-full h-full border-0" 
                         allowfullscreen="" 
                         loading="lazy" 
@@ -289,10 +293,35 @@
         </div>
     </section>
 
+    <!-- 6. FOOTER -->
     <footer class="bg-brand-dark text-slate-400 py-8 border-t border-slate-800 text-sm">
         <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div>
                 © 2026 Gloris Commerce Sdn Bhd. Hak Cipta Terpelihara.
             </div>
             <div class="flex space-x-6">
-                <a href="#" class="hover:text-white transition-colors">Dasar Pri
+                <a href="#" class="hover:text-white transition-colors">Dasar Privasi</a>
+                <a href="#" class="hover:text-white transition-colors">Terma Servis</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================================= -->
+    <!-- 7. FLOATING WHATSAPP BUTTON (DENGAN REKA BENTUK PREMIUM) -->
+    <!-- ========================================================= -->
+    <a href="https://wa.me/601165561305?text=Salam%20Gloris%20Commerce,%20saya%20mahu%20bertanya%20mengenai%20servis%20fulfillment." 
+       target="_blank" 
+       class="fixed bottom-6 right-6 z-50 flex items-center bg-brand-whatsapp text-white px-4 py-3 rounded-full shadow-2xl hover:scale-105 transition-transform duration-300 group font-semibold text-sm">
+        
+        <!-- Kesan Animasi Pulse Bulatan -->
+        <span class="absolute inset-0 rounded-full bg-brand-whatsapp/40 animate-ping -z-10 group-hover:hidden"></span>
+        
+        <!-- Ikon WhatsApp -->
+        <i class="fa-brands fa-whatsapp text-2xl md:mr-2"></i>
+        
+        <!-- Teks Butang -->
+        <span class="hidden md:inline-block">Hubungi Kami</span>
+    </a>
+
+</body>
+</html>
