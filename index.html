@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gloris Commerce Sdn Bhd - Pakej Fulfillment & Gudang E-Commerce</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
         tailwind.config = {
@@ -12,8 +14,8 @@
                 extend: {
                     colors: {
                         brand: {
-                            dark: '#0B192C',   /* Navy Blue Gelap - Melambangkan Keselamatan */
-                            orange: '#FF6500', /* Oren Logistik - Dinamik & Profesional */
+                            dark: '#0B192C',   /* Navy Blue Gelap */
+                            orange: '#FF6500', /* Oren Logistik */
                             light: '#F1F6F9',
                             whatsapp: '#25D366'
                         }
@@ -25,24 +27,28 @@
 </head>
 <body class="bg-brand-light text-slate-800 font-sans antialiased scroll-smooth pb-12">
 
+    <!-- 1. HEADER & NAVIGATION -->
     <header class="bg-brand-dark text-white sticky top-0 z-50 shadow-md">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#home" class="flex items-center space-x-3 hover:opacity-90 transition-opacity">
-                <i class="fa-solid fa-warehouse text-brand-orange text-3xl"></i>
-                <span class="text-xl font-bold tracking-wider">GLORIS<span class="text-brand-orange">COMMERCE</span></span>
+        <div class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <!-- Logo Syarikat (Back To Top) -->
+            <a href="#home" class="flex items-center space-x-2 sm:space-x-3 hover:opacity-90 transition-opacity shrink-0">
+                <i class="fa-solid fa-warehouse text-brand-orange text-2xl sm:text-3xl"></i>
+                <span class="text-lg sm:text-xl font-bold tracking-wider">GLORIS<span class="text-brand-orange">COMMERCE</span></span>
             </a>
             
-            <nav class="hidden md:flex space-x-8 font-medium">
+            <!-- Menu Navigasi (Hanya muncul di Desktop Besar untuk elak pecah) -->
+            <nav class="hidden lg:flex space-x-8 font-medium">
                 <a href="#home" class="hover:text-brand-orange transition-colors">Utama</a>
                 <a href="#services" class="hover:text-brand-orange transition-colors">Servis Kami</a>
                 <a href="#about" class="hover:text-brand-orange transition-colors">Mengenai Kami</a>
                 <a href="#contact" class="hover:text-brand-orange transition-colors">Hubungi Kami</a>
             </nav>
 
-            <div class="hidden md:flex items-center space-x-4">
+            <!-- CTA Pantas (Desktop) -->
+            <div class="hidden sm:flex items-center space-x-4">
                 <a href="https://wa.me/601165561305?text=Salam%20Gloris%20Commerce,%20saya%20berminat%20dengan%20servis%20fulfillment%20gudang." 
                    target="_blank" 
-                   class="bg-brand-whatsapp text-white px-4 py-2 rounded-lg font-semibold flex items-center space-x-2 hover:opacity-90 transition-opacity">
+                   class="bg-brand-whatsapp text-white px-4 py-2 rounded-lg font-semibold flex items-center space-x-2 hover:opacity-90 transition-opacity text-sm">
                     <i class="fa-brands fa-whatsapp text-lg"></i>
                     <span>WhatsApp Kami</span>
                 </a>
@@ -50,171 +56,178 @@
         </div>
     </header>
 
-    <section id="home" class="bg-brand-dark text-white py-20 md:py-32 relative overflow-hidden">
+    <!-- 2. HERO SECTION -->
+    <section id="home" class="bg-brand-dark text-white py-12 md:py-24 relative overflow-hidden">
         <div class="absolute inset-0 opacity-10 pointer-events-none">
             <div class="absolute -top-10 -right-10 w-96 h-96 bg-brand-orange rounded-full filter blur-3xl"></div>
         </div>
         
-        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
-            <div class="space-y-6">
-                <span class="text-brand-orange font-semibold uppercase tracking-widest text-sm bg-orange-500/10 px-3 py-1 rounded-full border border-brand-orange/20">Penyelesaian 3PL Pilihan Anda</span>
-                <h1 class="text-4xl md:text-5xl font-black leading-tight">
+        <div class="container mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+            <div class="space-y-6 text-left">
+                <span class="inline-block text-brand-orange font-semibold uppercase tracking-widest text-xs bg-orange-500/10 px-3 py-1 rounded-full border border-brand-orange/20">Penyelesaian 3PL Pilihan Anda</span>
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-black leading-tight">
                     Anda Fokus Jual,<br><span class="text-brand-orange">Kami Urus</span> Simpan & Pos Barang.
                 </h1>
-                <p class="text-slate-300 text-lg">
+                <p class="text-slate-300 text-base sm:text-lg max-w-xl">
                     Gloris Commerce Sdn Bhd menyediakan sistem pengurusan stor, pembungkusan pantas, dan penghantaran terus kepada pelanggan e-commerce anda tanpa pusing kepala. Selamat, sistematik, and efisien.
                 </p>
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
-                    <a href="#contact" class="bg-brand-orange text-white text-center px-8 py-4 rounded-xl font-bold shadow-lg shadow-orange-500/20 hover:bg-orange-600 transition-colors">
+                <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 pt-2">
+                    <a href="#contact" class="bg-brand-orange text-white text-center px-6 py-3.5 rounded-xl font-bold shadow-lg shadow-orange-500/20 hover:bg-orange-600 transition-colors text-sm sm:text-base">
                         Minta Sebut Harga
                     </a>
-                    <a href="https://wa.me/601165561305?text=Salam%20Gloris%20Commerce,%20saya%20berminat%20dengan%20servis%20fulfillment%20gudang." target="_blank" class="border border-white/20 text-center px-8 py-4 rounded-xl font-bold flex items-center justify-center space-x-2 hover:bg-white/10 transition-colors">
+                    <a href="https://wa.me/601165561305?text=Salam%20Gloris%20Commerce,%20saya%20berminat%20dengan%20servis%20fulfillment%20gudang." target="_blank" class="border border-white/20 text-center px-6 py-3.5 rounded-xl font-bold flex items-center justify-center space-x-2 hover:bg-white/10 transition-colors text-sm sm:text-base">
                         <i class="fa-brands fa-whatsapp text-brand-whatsapp text-xl"></i>
                         <span>Bincang di WhatsApp</span>
                     </a>
                 </div>
             </div>
             
-            <div class="hidden md:flex justify-center relative">
-                <div class="w-full h-80 bg-slate-800 rounded-2xl border border-slate-700 p-8 flex flex-col justify-between shadow-2xl relative">
-                    <div class="flex justify-between items-center border-b border-slate-700 pb-4">
+            <!-- Ilustrasi Gudang Dashboard (Sudah dibersihkan dan dioptimumkan untuk Mobile) -->
+            <div class="w-full flex justify-center relative">
+                <div class="w-full max-w-md bg-slate-800 rounded-2xl border border-slate-700 p-6 sm:p-8 flex flex-col justify-between shadow-2xl relative">
+                    <div class="flex justify-between items-center border-b border-slate-700 pb-4 mb-6">
                         <div class="flex items-center space-x-2">
                             <div class="w-3 h-3 rounded-full bg-red-500"></div>
                             <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
                             <div class="w-3 h-3 rounded-full bg-green-500"></div>
                         </div>
-                        <span class="text-xs text-slate-400 font-mono">gloris-dashboard.sys</span>
                     </div>
-                    <div class="grid grid-cols-3 gap-4 my-auto">
-                        <div class="bg-slate-700/50 p-4 rounded-xl border border-slate-600/30 text-center">
-                            <i class="fa-solid fa-boxes-stacked text-brand-orange text-2xl mb-2"></i>
-                            <div class="text-xs text-slate-400">Total Stok</div>
-                            <div class="text-lg font-bold">14,250</div>
+                    <div class="grid grid-cols-3 gap-3 sm:gap-4 my-auto">
+                        <div class="bg-slate-700/50 p-3 sm:p-4 rounded-xl border border-slate-600/30 text-center">
+                            <i class="fa-solid fa-boxes-stacked text-brand-orange text-xl sm:text-2xl mb-2"></i>
+                            <div class="text-[10px] sm:text-xs text-slate-400">Total Stok</div>
+                            <div class="text-base sm:text-lg font-bold">14,250</div>
                         </div>
-                        <div class="bg-slate-700/50 p-4 rounded-xl border border-slate-600/30 text-center">
-                            <i class="fa-solid fa-truck-ramp-box text-green-400 text-2xl mb-2"></i>
-                            <div class="text-xs text-slate-400">Dipos Hari Ini</div>
-                            <div class="text-lg font-bold">342</div>
+                        <div class="bg-slate-700/50 p-3 sm:p-4 rounded-xl border border-slate-600/30 text-center">
+                            <i class="fa-solid fa-truck-ramp-box text-green-400 text-xl sm:text-2xl mb-2"></i>
+                            <div class="text-[10px] sm:text-xs text-slate-400">Dipos Hari Ini</div>
+                            <div class="text-base sm:text-lg font-bold">342</div>
                         </div>
-                        <div class="bg-slate-700/50 p-4 rounded-xl border border-slate-600/30 text-center">
-                            <i class="fa-solid fa-clipboard-check text-blue-400 text-2xl mb-2"></i>
-                            <div class="text-xs text-slate-400">Status Gudang</div>
-                            <div class="text-lg font-bold text-green-400">99.8%</div>
+                        <div class="bg-slate-700/50 p-3 sm:p-4 rounded-xl border border-slate-600/30 text-center">
+                            <i class="fa-solid fa-clipboard-check text-blue-400 text-xl sm:text-2xl mb-2"></i>
+                            <div class="text-[10px] sm:text-xs text-slate-400">Status Gudang</div>
+                            <div class="text-base sm:text-lg font-bold text-green-400">99.8%</div>
                         </div>
                     </div>
-                    <div class="text-right text-[10px] text-slate-500">Secured with End-to-End SSL</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="services" class="py-20 bg-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-black text-brand-dark">Servis Pengurusan Penuh Kami</h2>
-            <p class="text-slate-500 max-w-xl mx-auto mt-2">Semua yang anda perlukan daripada proses barang sampai hinggalah bungkusan selamat di tangan pelanggan.</p>
+    <!-- 3. SERVICES SECTION -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 text-center">
+            <h2 class="text-2xl sm:text-3xl font-black text-brand-dark">Servis Pengurusan Penuh Kami</h2>
+            <p class="text-slate-500 max-w-xl mx-auto mt-2 text-sm sm:text-base">Semua yang anda perlukan daripada proses barang sampai hinggalah bungkusan selamat di tangan pelanggan.</p>
             
-            <div class="grid md:grid-cols-3 gap-8 mt-12 text-left">
-                <div class="p-8 rounded-2xl bg-brand-light border border-slate-200/60 hover:shadow-xl transition-shadow group">
-                    <div class="w-14 h-14 rounded-xl bg-orange-500/10 flex items-center justify-center text-brand-orange text-2xl mb-6 group-hover:bg-brand-orange group-hover:text-white transition-all">
+            <div class="grid md:grid-cols-3 gap-6 sm:gap-8 mt-12 text-left">
+                <!-- Kad 1 -->
+                <div class="p-6 sm:p-8 rounded-2xl bg-brand-light border border-slate-200/60 hover:shadow-xl transition-shadow group">
+                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-orange-500/10 flex items-center justify-center text-brand-orange text-xl sm:text-2xl mb-6 group-hover:bg-brand-orange group-hover:text-white transition-all">
                         <i class="fa-solid fa-boxes-packing"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-brand-dark mb-3">1. Simpanan Selamat (Inbound & Storage)</h3>
-                    <p class="text-slate-600 leading-relaxed">Barang modal anda disimpan di dalam gudang berpengawal, bebas kelembapan, dan dipantau CCTV 24 jam dengan sistem susunan rak berkod.</p>
+                    <h3 class="text-lg sm:text-xl font-bold text-brand-dark mb-3">1. Simpanan Selamat (Inbound & Storage)</h3>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">Barang modal anda disimpan di dalam gudang berpengawal, bebas kelembapan, dan dipantau CCTV 24 jam dengan sistem susunan rak berkod.</p>
                 </div>
 
-                <div class="p-8 rounded-2xl bg-brand-light border border-slate-200/60 hover:shadow-xl transition-shadow group">
-                    <div class="w-14 h-14 rounded-xl bg-orange-500/10 flex items-center justify-center text-brand-orange text-2xl mb-6 group-hover:bg-brand-orange group-hover:text-white transition-all">
+                <!-- Kad 2 -->
+                <div class="p-6 sm:p-8 rounded-2xl bg-brand-light border border-slate-200/60 hover:shadow-xl transition-shadow group">
+                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-orange-500/10 flex items-center justify-center text-brand-orange text-xl sm:text-2xl mb-6 group-hover:bg-brand-orange group-hover:text-white transition-all">
                         <i class="fa-solid fa-box-open"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-brand-dark mb-3">2. Pembungkusan Pantas (Pick & Pack)</h3>
-                    <p class="text-slate-600 leading-relaxed">Sistem cetakan consignment note automatik. Setiap pesanan dibungkus kemas menggunakan bubble wrap tebal mengikut standard SOP ketat.</p>
+                    <h3 class="text-lg sm:text-xl font-bold text-brand-dark mb-3">2. Pembungkusan Pantas (Pick & Pack)</h3>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">Sistem cetakan consignment note automatik. Setiap pesanan dibungkus kemas menggunakan bubble wrap tebal mengikut standard SOP ketat.</p>
                 </div>
 
-                <div class="p-8 rounded-2xl bg-brand-light border border-slate-200/60 hover:shadow-xl transition-shadow group">
-                    <div class="w-14 h-14 rounded-xl bg-orange-500/10 flex items-center justify-center text-brand-orange text-2xl mb-6 group-hover:bg-brand-orange group-hover:text-white transition-all">
+                <!-- Kad 3 -->
+                <div class="p-6 sm:p-8 rounded-2xl bg-brand-light border border-slate-200/60 hover:shadow-xl transition-shadow group">
+                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-orange-500/10 flex items-center justify-center text-brand-orange text-xl sm:text-2xl mb-6 group-hover:bg-brand-orange group-hover:text-white transition-all">
                         <i class="fa-solid fa-truck-fast"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-brand-dark mb-3">3. Urusan Kurier (Last-Mile Delivery)</h3>
-                    <p class="text-slate-600 leading-relaxed">Kerjasama rapat dengan pelbagai syarikat kurier utama tempatan. Lori kurier datang ambil barang terus di gudang kami setiap hari.</p>
+                    <h3 class="text-lg sm:text-xl font-bold text-brand-dark mb-3">3. Urusan Kurier (Last-Mile Delivery)</h3>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">Kerjasama rapat dengan pelbagai syarikat kurier utama tempatan. Lori kurier datang ambil barang terus di gudang kami setiap hari.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="py-20 bg-brand-light">
-        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    <!-- 4. ABOUT & WHY CHOOSE US -->
+    <section id="about" class="py-16 bg-brand-light">
+        <div class="container mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12 items-center">
             <div class="space-y-6">
-                <h2 class="text-3xl font-black text-brand-dark">Mengenai Ruang Gudang & Operasi Kami</h2>
-                <p class="text-slate-600 leading-relaxed">
+                <h2 class="text-2xl sm:text-3xl font-black text-brand-dark">Mengenai Ruang Gudang & Operasi Kami</h2>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
                     Kami di Gloris Commerce Sdn Bhd menyediakan fasiliti gudang mikro (Micro-fulfillment) bertempat di kawasan strategik Seksyen U5, Shah Alam / Subang. Kami faham bahawa kekangan utama peniaga e-commerce yang sedang menaik (scaling) adalah isu ruang rumah penuh dengan stok dan masa habis terbuang membungkus barang secara manual.
                 </p>
                 <div class="space-y-4">
                     <div class="flex items-start space-x-3">
                         <i class="fa-solid fa-circle-check text-emerald-500 text-xl mt-1"></i>
                         <div>
-                            <h4 class="font-bold text-brand-dark">Keluasan Gudang Strategik</h4>
-                            <p class="text-slate-500 text-sm">Mampu menampung ribuan kuantiti SKU barangan dalam satu-satu masa dengan susun atur sistematik.</p>
+                            <h4 class="font-bold text-brand-dark text-sm sm:text-base">Keluasan Gudang Strategik</h4>
+                            <p class="text-slate-500 text-xs sm:text-sm">Mampu menampung ribuan kuantiti SKU barangan dalam satu-satu masa dengan susun atur sistematik.</p>
                         </div>
                     </div>
                     <div class="flex items-start space-x-3">
                         <i class="fa-solid fa-circle-check text-emerald-500 text-xl mt-1"></i>
                         <div>
-                            <h4 class="font-bold text-brand-dark">Sistem Kemas Kini Selamat</h4>
-                            <p class="text-slate-500 text-sm">Rekod stok keluar masuk dikemas kini dengan teliti secara harian.</p>
+                            <h4 class="font-bold text-brand-dark text-sm sm:text-base">Sistem Kemas Kini Selamat</h4>
+                            <p class="text-slate-500 text-xs sm:text-sm">Rekod stok keluar masuk dikemas kini dengan teliti secara harian.</p>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div class="bg-brand-dark text-white p-10 rounded-2xl grid grid-cols-2 gap-8 shadow-xl">
+            <div class="bg-brand-dark text-white p-6 sm:p-10 rounded-2xl grid grid-cols-2 gap-4 sm:gap-8 shadow-xl">
                 <div class="text-center p-4 bg-slate-800 rounded-xl border border-slate-700/50">
-                    <div class="text-3xl md:text-4xl font-black text-brand-orange">5,000+</div>
-                    <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider">Pesanan Sebulan</div>
+                    <div class="text-2xl sm:text-4xl font-black text-brand-orange">5,000+</div>
+                    <div class="text-[10px] sm:text-xs text-slate-400 mt-1 uppercase tracking-wider">Pesanan Sebulan</div>
                 </div>
                 <div class="text-center p-4 bg-slate-800 rounded-xl border border-slate-700/50">
-                    <div class="text-3xl md:text-4xl font-black text-brand-orange">99.9%</div>
-                    <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider">Akurasi Pembungkusan</div>
+                    <div class="text-2xl sm:text-4xl font-black text-brand-orange">99.9%</div>
+                    <div class="text-[10px] sm:text-xs text-slate-400 mt-1 uppercase tracking-wider">Akurasi Pembungkusan</div>
                 </div>
                 <div class="text-center p-4 bg-slate-800 rounded-xl border border-slate-700/50">
-                    <div class="text-3xl md:text-4xl font-black text-brand-orange">24/7</div>
-                    <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider">Kawalan Keselamatan</div>
+                    <div class="text-2xl sm:text-4xl font-black text-brand-orange">24/7</div>
+                    <div class="text-[10px] sm:text-xs text-slate-400 mt-1 uppercase tracking-wider">Kawalan Keselamatan</div>
                 </div>
                 <div class="text-center p-4 bg-slate-800 rounded-xl border border-slate-700/50">
-                    <div class="text-3xl md:text-4xl font-black text-brand-orange">RM0</div>
-                    <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider">Yuran Pendaftaran</div>
+                    <div class="text-2xl sm:text-4xl font-black text-brand-orange">RM0</div>
+                    <div class="text-[10px] sm:text-xs text-slate-400 mt-1 uppercase tracking-wider">Yuran Pendaftaran</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-20 bg-white">
-        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12">
+    <!-- 5. CONTACT, FORM & MAP SECTION -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12">
             
-            <div class="bg-brand-light p-8 rounded-2xl border border-slate-200 shadow-sm">
-                <h3 class="text-2xl font-bold text-brand-dark mb-2">Hubungi Kami / Dapatkan Sebut Harga</h3>
-                <p class="text-slate-500 text-sm mb-6">Isi borang di bawah, pasukan jualan Gloris Commerce Sdn Bhd akan emelkan sebut harga pakej stor simpanan dalam masa 24 jam.</p>
+            <!-- Bahagian Borang Pertanyaan -->
+            <div class="bg-brand-light p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+                <h3 class="text-xl sm:text-2xl font-bold text-brand-dark mb-2">Hubungi Kami / Dapatkan Sebut Harga</h3>
+                <p class="text-slate-500 text-xs sm:text-sm mb-6">Isi borang di bawah, pasukan jualan Gloris Commerce Sdn Bhd akan emelkan sebut harga pakej stor simpanan dalam masa 24 jam.</p>
                 
                 <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
                     <input type="hidden" name="access_key" value="a70b28a4-a05b-4095-b23c-c0090fa0d142">
                     
                     <div>
-                        <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Nama Penuh / Nama Syarikat</label>
-                        <input type="text" name="name" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:border-brand-orange" placeholder="Contoh: Ahmad Trading Sdn Bhd">
+                        <label class="block text-[10px] sm:text-xs font-bold uppercase text-slate-600 mb-1">Nama Penuh / Nama Syarikat</label>
+                        <input type="text" name="name" required class="w-full px-4 py-2.5 sm:py-3 rounded-lg border border-slate-300 focus:outline-none focus:border-brand-orange text-sm" placeholder="Contoh: Ahmad Trading Sdn Bhd">
                     </div>
                     
                     <div>
-                        <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Alamat Emel</label>
-                        <input type="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:border-brand-orange" placeholder="ahmad@gmail.com">
+                        <label class="block text-[10px] sm:text-xs font-bold uppercase text-slate-600 mb-1">Alamat Emel</label>
+                        <input type="email" name="email" required class="w-full px-4 py-2.5 sm:py-3 rounded-lg border border-slate-300 focus:outline-none focus:border-brand-orange text-sm" placeholder="ahmad@gmail.com">
                     </div>
 
                     <div>
-                        <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Jenis Produk Yang Dijual</label>
-                        <input type="text" name="product_type" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:border-brand-orange" placeholder="Contoh: Kosmetik, Pakaian, Gajet">
+                        <label class="block text-[10px] sm:text-xs font-bold uppercase text-slate-600 mb-1">Jenis Produk Yang Dijual</label>
+                        <input type="text" name="product_type" class="w-full px-4 py-2.5 sm:py-3 rounded-lg border border-slate-300 focus:outline-none focus:border-brand-orange text-sm" placeholder="Contoh: Kosmetik, Pakaian, Gajet">
                     </div>
 
                     <div>
-                        <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Anggaran Pesanan Sebulan</label>
-                        <select name="order_volume" class="w-full px-4 py-3 rounded-lg border border-slate-300 bg-white focus:outline-none focus:border-brand-orange">
+                        <label class="block text-[10px] sm:text-xs font-bold uppercase text-slate-600 mb-1">Anggaran Pesanan Sebulan</label>
+                        <select name="order_volume" class="w-full px-4 py-2.5 sm:py-3 rounded-lg border border-slate-300 bg-white focus:outline-none focus:border-brand-orange text-sm">
                             <option value="under_100">Kurang 100 pesanan</option>
                             <option value="100_500">100 - 500 pesanan</option>
                             <option value="500_2000">500 - 2,000 pesanan</option>
@@ -222,19 +235,20 @@
                         </select>
                     </div>
 
-                    <button type="submit" class="w-full bg-brand-dark text-white font-bold py-3 px-6 rounded-lg hover:bg-slate-800 transition-colors">
+                    <button type="submit" class="w-full bg-brand-dark text-white font-bold py-3 px-6 rounded-lg hover:bg-slate-800 transition-colors text-sm">
                         Hantar Pertanyaan
                     </button>
                 </form>
             </div>
 
+            <!-- Maklumat Lokasi Fizikal & Google Maps Embedded -->
             <div class="flex flex-col justify-between space-y-6">
                 <div class="space-y-4">
-                    <h3 class="text-2xl font-bold text-brand-dark">Hubungi Hub Kami</h3>
-                    <p class="text-slate-600">
+                    <h3 class="text-xl sm:text-2xl font-bold text-brand-dark">Hubungi Hub Kami</h3>
+                    <p class="text-slate-600 text-sm sm:text-base">
                         Anda dialu-alukan untuk melawat gudang kami bagi melihat sendiri cara operasi atau menghantar stok barangan modal anda.
                     </p>
-                    <div class="space-y-3 text-sm text-slate-600">
+                    <div class="space-y-3 text-xs sm:text-sm text-slate-600">
                         <div class="flex items-start space-x-2">
                             <i class="fa-solid fa-location-dot text-brand-orange w-5 mt-1"></i>
                             <p class="leading-relaxed">
@@ -262,6 +276,7 @@
                     </div>
                 </div>
 
+                <!-- Google Maps Embed Berserta Butang Akses Direct -->
                 <div class="w-full flex flex-col space-y-3">
                     <div class="w-full h-64 rounded-2xl overflow-hidden border border-slate-200 shadow-inner">
                         <iframe 
@@ -275,8 +290,8 @@
                     
                     <a href="https://www.google.com/maps/search/?api=1&query=32-G,+Jalan+Musytari+AQ+U5/AQ,+Bandar+Pinggiran+Subang,+40150+Shah+Alam,+Selangor" 
                        target="_blank" 
-                       class="w-full bg-slate-100 hover:bg-slate-200 text-brand-dark font-bold py-3 px-4 rounded-xl flex items-center justify-center space-x-2 border border-slate-300/80 transition-colors text-sm shadow-sm">
-                        <i class="fa-solid fa-map-location-dot text-brand-orange text-lg"></i>
+                       class="w-full bg-slate-100 hover:bg-slate-200 text-brand-dark font-bold py-3 px-4 rounded-xl flex items-center justify-center space-x-2 border border-slate-300/80 transition-colors text-xs sm:text-sm shadow-sm">
+                        <i class="fa-solid fa-map-location-dot text-brand-orange text-base sm:text-lg"></i>
                         <span>Buka Lokasi Tepat di Google Maps</span>
                     </a>
                 </div>
@@ -284,7 +299,8 @@
         </div>
     </section>
 
-    <footer class="bg-brand-dark text-slate-400 py-8 border-t border-slate-800 text-sm">
+    <!-- 6. FOOTER -->
+    <footer class="bg-brand-dark text-slate-400 py-8 border-t border-slate-800 text-xs sm:text-sm">
         <div class="container mx-auto px-6 text-center">
             <p>
                 Hak Cipta Terpelihara © 2026 Gloris Commerce Sdn Bhd.
@@ -292,14 +308,12 @@
         </div>
     </footer>
 
+    <!-- 7. FLOATING WHATSAPP BUTTON -->
     <a href="https://wa.me/601165561305?text=Salam%20Gloris%20Commerce,%20saya%20mahu%20bertanya%20mengenai%20servis%20fulfillment." 
        target="_blank" 
-       class="fixed bottom-6 right-6 z-50 flex items-center bg-brand-whatsapp text-white px-4 py-3 rounded-full shadow-2xl hover:scale-105 transition-transform duration-300 group font-semibold text-sm">
-        
+       class="fixed bottom-6 right-6 z-50 flex items-center bg-brand-whatsapp text-white px-4 py-3 rounded-full shadow-2xl hover:scale-105 transition-transform duration-300 group font-semibold text-xs sm:text-sm">
         <span class="absolute inset-0 rounded-full bg-brand-whatsapp/40 animate-ping -z-10 group-hover:hidden"></span>
-        
-        <i class="fa-brands fa-whatsapp text-2xl md:mr-2"></i>
-        
+        <i class="fa-brands fa-whatsapp text-xl sm:text-2xl md:mr-2"></i>
         <span class="hidden md:inline-block">Hubungi Kami</span>
     </a>
 
